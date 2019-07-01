@@ -68,8 +68,8 @@
 
     <main>
         <section id="home" class="home">
-            <div class="shape1 wow fadeInRight"></div>
-            <div class="shape2 wow fadeInDown"></div>
+            <div class="shape1 wow fadeInRight" data-wow-delay="0.2s"></div>
+            <div class="shape2 wow fadeInDown" data-wow-delay="0.3s"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 home__hero">
@@ -98,7 +98,7 @@
         </section>
 
         <section id="steps" class="steps">
-            <div class="shape3 wow fadeInLeft"></div>
+            <div class="shape3 wow fadeInLeft"  data-wow-delay="0.2s"></div>
             <div class="shape4 wow fadeInRight"></div>
             <div class="container">
                 <div class="row">
@@ -111,7 +111,9 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <div class="wow zoomIn steps__video">
-                                    <iframe src="https://www.youtube.com/embed/8nyORcDZ4x4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/8nyORcDZ4x4" frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -127,8 +129,8 @@
                         <source src="../images/backgrounds/video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video> -->
-                        <!-- Em caso de imagem, apenas usar a tag <img> -->
-                        <img src="../images/backgrounds/differential1.png" alt="">
+                    <!-- Em caso de imagem, apenas usar a tag <img> -->
+                    <img src="../images/backgrounds/differential1.png" alt="">
                 </div>
                 <div class="differentials__item__caption">
                     <div class="differentials__item__caption__caption">
@@ -198,16 +200,26 @@
         </section>
 
         <section id="contact" class="contact">
+            <div class="shape5"></div>
             <div class="container">
-                <h3 class="contact__caption">
-                    Essas ações funcionaram como um alerta a todos para a necessidade de simplificar os processos e o
-                    dia a dia dentro da empresa. Se você tem alguma sugestão que possa contribuir para isso, mande para
-                    nós
-                    <span>neste formulário.</span>
-                    Você pode fazer isso anonimamente e sua identidade será preservada.
-                </h3>
-                <div class="contact__form">
-
+                <div class="contact__caption">
+                    <h3 class="contact__caption__title wow fadeInUp">
+                        Essas ações funcionaram como um alerta a todos para a necessidade de simplificar os processos e
+                        o
+                        dia a dia dentro da empresa. Se você tem alguma sugestão que possa contribuir para isso, mande
+                        para
+                        nós
+                        <span class="wow zoomIn">neste formulário.</span>
+                        Você pode fazer isso anonimamente e sua identidade será preservada.
+                    </h3>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="contact__box wow zoomIn">
+                        <form action="">
+                            <textarea name="sugestao"></textarea>
+                            <button type="submit" class="contact__box__submit wow fadeInUp"></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

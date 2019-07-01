@@ -603,10 +603,10 @@ textarea.form-control {
   padding-left: 160px;
   height: 300px;
   width: 53%;
-  margin-right: -30px;
+  margin-right: -5%;
   border-radius: 20px;
   transform: translate(-30px, 40px);
-  box-shadow: 20px 23px 60px rgba(2, 2, 2, 0.186);
+  box-shadow: 20px 23px 60px rgba(2, 2, 2, 0.216);
   z-index: 3;
   background: linear-gradient(to right, #ca5292, #e64b2b, transparent) border-box;
 }
@@ -714,7 +714,7 @@ textarea.form-control {
   padding-right: 160px;
   padding-left: 10px;
   margin-right: 0;
-  margin-left: -30px;
+  margin-left: -5%;
   border-radius: 0 20px 20px 0;
   border-left: none;
   background: linear-gradient(to left, #ca5292, #e64b2b, transparent) border-box;
@@ -729,13 +729,13 @@ textarea.form-control {
 }
 
 .differentials__item__caption.left:after {
-  left: 6px;
+  left: 0.8%;
   right: unset;
 }
 
 @media screen and (max-width: 768px) {
   .differentials__item__caption.left:after {
-    top: 1px;
+    top: 2px;
     left: 2.5px;
   }
 }
@@ -749,13 +749,6 @@ textarea.form-control {
   .differentials__item__caption.left .differentials__item__caption__icon {
     left: 50%;
     top: -65px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .differentials__item__caption.left .differentials__item__caption__caption {
-    margin-top: 0;
-    margin-bottom: 30px;
   }
 }
 
@@ -870,6 +863,133 @@ textarea.form-control {
 .steps__video iframe {
   width: 100%;
   height: 100%;
+}
+
+.contact {
+  position: relative;
+  padding: 80px 0;
+  padding: 60px 0 100px 0;
+  background-image: url(../images/backgrounds/bgcontact.png);
+  background-size: 100% 100%;
+}
+
+.contact .shape5 {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: -140px;
+  width: 280px;
+  height: 280px;
+  background-image: url(../images/backgrounds/shape1.png);
+  background-size: contain;
+  background-position: center;
+  z-index: 3;
+}
+
+@media screen and (max-width: 576px) {
+  .contact .shape5 {
+    left: -40px;
+    top: -120px;
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.contact__caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__caption__title {
+  font-size: 16px;
+  color: #471e6a;
+  text-align: center;
+  width: 70%;
+}
+
+@media screen and (max-width: 992px) {
+  .contact__caption__title {
+    font-size: 14px;
+  }
+}
+
+.contact__caption__title span {
+  display: block;
+  padding: 3px 0;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: -6px;
+  color: #e64b2b;
+}
+
+@media screen and (max-width: 992px) {
+  .contact__caption__title span {
+    font-size: 23px;
+  }
+}
+
+.contact__box {
+  position: relative;
+  border: 10px solid #471e6a;
+  border-radius: 13px;
+  background-color: #e6e6e6;
+  width: 80%;
+  height: 50vh;
+  overflow: hidden;
+  margin: 20px 0;
+  overflow: visible;
+}
+
+@media screen and (max-width: 576px) {
+  .contact__box {
+    height: 65vh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contact__box {
+    width: 95%;
+  }
+}
+
+.contact__box__submit {
+  position: absolute;
+  bottom: -120px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/ico/sendbtn.png");
+  background-size: contain;
+  background-position: center center;
+  background-color: transparent;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact__box__submit:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.contact__box form {
+  height: 100%;
+  width: 100%;
+}
+
+.contact__box textarea {
+  width: 100%;
+  height: 100%;
+  padding: 30px 40px;
+  color: #471e6a;
+  background-color: transparent;
 }
 
 body {

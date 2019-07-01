@@ -63,10 +63,10 @@
             padding-left: 160px;
             height: 300px;
             width: 53%;
-            margin-right: -30px;
+            margin-right: -5%;
             border-radius: 20px;
             transform: translate(-30px, 40px);
-            box-shadow: 20px 23px 60px rgba(2, 2, 2, 0.186);
+            box-shadow: 20px 23px 60px rgba(2, 2, 2, 0.216);
             z-index: 3;
             background:
                 linear-gradient(to right, #ca5292, $color-primary, transparent) border-box;
@@ -162,7 +162,7 @@
                 padding-right: 160px;
                 padding-left: 10px;
                 margin-right: 0;
-                margin-left: -30px;
+                margin-left: -5%;
                 border-radius: 0 20px 20px 0;
                 border-left: none;
                 background:
@@ -175,12 +175,12 @@
                 }
 
                 &:after {
-                    left: 6px;
+                    left: 0.8%;
                     right: unset;
 
                     // Fix medium devices pixel bug
                     @media screen and (max-width: $bp-MD) {
-                        top: 1px;
+                        top: 2px;
                         left: 2.5px;
                     }
                 }
@@ -197,12 +197,6 @@
                         }
                     }
 
-                    &__caption {
-                        @media screen and(max-width: $bp-LG) {
-                            margin-top: 0;
-                            margin-bottom: 30px;
-                        }
-                    }
                 }
 
                 .differentials__item__caption__time {
