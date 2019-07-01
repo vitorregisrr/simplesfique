@@ -1,0 +1,217 @@
+.differentials {
+    padding: 30px 0;
+    margin-top: 30px;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        @media screen and (max-width: $bp-LG) {
+            flex-direction: column;
+        }
+
+
+        &:not(:last-child) {
+            margin-bottom: 100px;
+
+            @media screen and (max-width: $bp-LG) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &__hero {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            height: 300px;
+            width: 53%;
+            border-radius: 0 20px 20px 0;
+
+            @media screen and (max-width: $bp-LG) {
+                align-self: flex-start;
+                width: 96%;
+            }
+
+            img,
+            video {
+                border-radius: inherit;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+            }
+
+            &.right {
+                border-radius: 20px 0 0 20px;
+
+                @media screen and (max-width: $bp-LG) {
+                    align-self: flex-end;
+                    order: -1;
+                }
+            }
+        }
+
+        &__caption {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 20px;
+            padding-left: 160px;
+            height: 300px;
+            width: 53%;
+            margin-right: -30px;
+            border-radius: 20px;
+            transform: translate(-30px, 40px);
+            box-shadow: 20px 23px 60px rgba(2, 2, 2, 0.186);
+            z-index: 3;
+            background:
+                linear-gradient(to right, #ca5292, $color-primary, transparent) border-box;
+
+            @media screen and (max-width: $bp-LG) {
+                align-self: flex-end;
+                width: 96%;
+                transform: translate(-20px, -40px);
+            }
+
+            @media screen and (max-width: $bp-SM) {
+                height: auto;
+                min-height: 300px;
+                padding-left: 77px;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 2px;
+                top: 1.7px;
+                border-radius: inherit;
+                width: 99%;
+                height: 99%;
+                z-index: -1;
+                background-color: #e6e6e6;
+            }
+
+            &__caption {
+                text-align: center;
+                width: 60%;
+                color: $color-secondary;
+
+                @media screen and (max-width: $bp-LG) {
+                    width: 90%;
+                    padding: 30px 0;
+                    margin-top: 40px;
+                }
+
+                &__title {
+                    font-weight: bold;
+                    font-size: 21px;
+                    margin-bottom: 4px;
+
+                    @media screen and (max-width: $bp-SM) {
+                        font-size: 15px;
+                    }
+                }
+
+                &__desc {
+                    font-size: 15px;
+
+                    @media screen and (max-width: $bp-SM) {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            &__time {
+                position: absolute;
+                left: -230px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #fff;
+                font-weight: bold;
+                font-size: 70px;
+                padding-right: 90px;
+                z-index: 2;
+
+                span {
+                    font-size: 46px;
+                }
+            }
+
+            &__icon {
+                position: absolute;
+                left: -70px;
+                top: 50%;
+                width: 140px;
+                height: 140px;
+                transform: translateY(-50%);
+
+                @media screen and (max-width: $bp-LG) {
+                    top: -65px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            &.left {
+                justify-content: flex-end;
+                transform: translate(30px, 40px);
+                padding-right: 160px;
+                padding-left: 10px;
+                margin-right: 0;
+                margin-left: -30px;
+                border-radius: 0 20px 20px 0;
+                border-left: none;
+                background:
+                    linear-gradient(to left, #ca5292, $color-primary, transparent) border-box;
+
+                @media screen and (max-width: $bp-LG) {
+                    transform: translate(30px, -40px);
+                    align-self: flex-start;
+                    padding-right: 77px;
+                }
+
+                &:after {
+                    left: 6px;
+                    right: unset;
+
+                    // Fix medium devices pixel bug
+                    @media screen and (max-width: $bp-MD) {
+                        top: 1px;
+                        left: 2.5px;
+                    }
+                }
+
+                .differentials__item__caption {
+
+                    &__icon {
+                        right: -70px;
+                        left: unset;
+
+                        @media screen and (max-width: $bp-LG) {
+                            left: 50%;
+                            top: -65px;
+                        }
+                    }
+
+                    &__caption {
+                        @media screen and(max-width: $bp-LG) {
+                            margin-top: 0;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+
+                .differentials__item__caption__time {
+                    right: -320px;
+                    left: unset;
+                }
+
+            }
+        }
+
+    }
+}
