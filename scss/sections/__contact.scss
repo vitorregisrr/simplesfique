@@ -1,27 +1,13 @@
 .contact {
     position: relative;
-    padding: 80px 0;
-    padding: 60px 0 100px 0;
+    padding: 60px 0 20px 0;
     background-image: url(../images/backgrounds/bgcontact.png);
     background-size: 100% 100%;
-    .shape5 {
-        content: '';
-        position: absolute;
-        left: 30px;
-        top: -140px;
-        width: 280px;
-        height: 280px;
-        background-image: url(../images/backgrounds/shape1.png);
-        background-size: contain;
-        background-position: center;
-        z-index: 3;
 
-        @media screen and (max-width: $bp-SM){
-            left: -40px;
-            top: -120px;
-            width: 230px;
-            height: 230px;
-        }
+    @media screen and (max-width: $bp-LG) {
+        padding: 30px 0;
+        background-size: cover;
+        background-position: 85%;
     }
 
     &__caption {
@@ -60,12 +46,13 @@
         border-radius: 13px;
         background-color: #e6e6e6;
         width: 80%;
-        height: 50vh;
+        height: 55vh;
         overflow: hidden;
         margin: 20px 0;
         overflow: visible;
-        
-        @media screen and (max-width: $bp-SM){
+        box-shadow: 20px 23px 50px rgba(2, 2, 2, 0.11);
+
+        @media screen and (max-width: $bp-SM) {
             height: 65vh;
         }
 
@@ -79,15 +66,27 @@
             right: -50px;
             width: 200px;
             height: 200px;
-            background-image: url('../images/ico/sendbtn.png');
-            background-size: contain;
-            background-position: center center;
-            background-color: transparent;
             border: none;
+            background-color: transparent;
             @include transition(0.3s);
-            
+
             &:hover {
                 @include scale(1.1);
+            }
+
+            &::after {
+                content: '';
+                top: 0;
+                left: 0;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-image: url('../images/ico/sendbtn.png');
+                background-size: contain;
+                background-position: center center;
+                -moz-animation: float 8s ease-in-out infinite;
+                -webkit-animation: float 8s ease-in-out infinite;
+                animation: float 8s ease-in-out infinite;
             }
         }
 

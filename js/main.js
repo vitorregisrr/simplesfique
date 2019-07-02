@@ -21,7 +21,7 @@
             scrollTop: 0
         }, '300');
     });
-
+    
     window.dispatchEvent(new Event('resize'));
 
 })();

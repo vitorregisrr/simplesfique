@@ -3,45 +3,7 @@
     padding: 30px 0;
     background-image: url(../images/backgrounds/bgsteps.png);
     background-size: cover;
-
-    .shape3 {
-        content: '';
-        position: absolute;
-        left: -110px;
-        top: -160px;
-        width: 400px;
-        height: 400px;
-        background-image: url(../images/backgrounds/shape1.png);
-        background-size: contain;
-        background-position: center;
-
-        @media screen and (max-width: $bp-LG){
-            width: 200px;
-            height: 200px;
-            left: -100px;
-            top: -140px;
-        }
-    }
-
-    .shape4 {
-        content: '';
-        position: absolute;
-        right: -110px;
-        bottom: -230px;
-        width: 450px;
-        height: 450px;
-        background-image: url(../images/backgrounds/shape1.png);
-        background-size: contain;
-        background-position: center;
-        z-index: 4;
-
-        @media screen and (max-width: $bp-MD){
-            width: 250px;
-            height: 250px;
-            bottom: -130px;
-        }
-    }
-
+    
     @media screen and (max-width: $bp-LG) {
         &::after {
             left: -170px;
@@ -84,6 +46,7 @@
         height: 80vh;
         overflow: hidden;
         margin: 20px 0;
+        box-shadow: 20px 23px 50px rgba(2, 2, 2, 0.11);
 
         @media screen and (max-width: $bp-LG) {
             width: 95%;

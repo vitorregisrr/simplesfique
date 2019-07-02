@@ -127,64 +127,15 @@
   font-weight: bold;
 }
 
-.bounce {
-  -moz-animation: bounce 1.5s infinite;
-  -webkit-animation: bounce 1.5s infinite;
-  animation: bounce 1.5s infinite;
-}
-
-@-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+@keyframes float {
+  0% {
+    transform: translatey(0px);
   }
   50% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
+    transform: translatey(-15px);
   }
   100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  50% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-  100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    transform: translatey(0px);
   }
 }
 
@@ -394,6 +345,321 @@ textarea.form-control {
   color: black;
 }
 
+.shape-parallax:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+.shape1 {
+  position: absolute;
+  right: -170px;
+  top: -140px;
+  width: 460px;
+  height: 460px;
+}
+
+@media screen and (max-width: 576px) {
+  .shape1 {
+    right: -40px;
+    top: -30px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.shape1::after {
+  content: '';
+  position: absolute;
+  background-image: url(../images/backgrounds/shape1.png);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  -moz-animation: float 4s ease-in-out infinite;
+  -webkit-animation: float 4s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
+}
+
+.shape6 {
+  position: absolute;
+  right: 280px;
+  top: -190px;
+  width: 350px;
+  height: 350px;
+}
+
+@media screen and (max-width: 992px) {
+  .shape6 {
+    display: none;
+  }
+}
+
+.shape6:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/backgrounds/shape1.png);
+  background-size: contain;
+  background-position: center;
+  -moz-animation: float 3s ease-in-out infinite;
+  -webkit-animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
+}
+
+.shape2 {
+  position: absolute;
+  left: -200px;
+  top: -200px;
+  width: 500px;
+  height: 500px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 992px) {
+  .shape2 {
+    width: 300px;
+    height: 300px;
+    top: -140px;
+    left: -60px;
+  }
+}
+
+.shape2::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/backgrounds/shape1.png);
+  background-size: contain;
+  -moz-animation: float 6s ease-in-out infinite;
+  -webkit-animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape5 {
+  position: absolute;
+  left: 30px;
+  top: -140px;
+  width: 280px;
+  height: 280px;
+  z-index: 3;
+}
+
+@media screen and (max-width: 576px) {
+  .shape5 {
+    left: -40px;
+    top: -120px;
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.shape5::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/backgrounds/shape1.png);
+  background-size: contain;
+  -moz-animation: float 6s ease-in-out infinite;
+  -webkit-animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape3 {
+  content: '';
+  position: absolute;
+  left: -110px;
+  top: -160px;
+  width: 400px;
+  height: 400px;
+}
+
+@media screen and (max-width: 992px) {
+  .shape3 {
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    top: -140px;
+  }
+}
+
+.shape3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/backgrounds/shape1.png);
+  background-size: contain;
+  -moz-animation: float 2.8s ease-in-out infinite;
+  -webkit-animation: float 2.8s ease-in-out infinite;
+  animation: float 2.8s ease-in-out infinite;
+}
+
+.shape4 {
+  content: '';
+  position: absolute;
+  right: -60px;
+  bottom: -230px;
+  width: 350px;
+  height: 350px;
+  z-index: 4;
+}
+
+@media screen and (max-width: 768px) {
+  .shape4 {
+    width: 250px;
+    height: 250px;
+    bottom: -130px;
+  }
+}
+
+.shape4::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/backgrounds/shape1.png);
+  background-size: contain;
+  -moz-animation: float 3s ease-in-out infinite;
+  -webkit-animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
+}
+
+.shape5 {
+  position: absolute;
+  left: 30px;
+  top: -140px;
+  width: 280px;
+  height: 280px;
+  z-index: 3;
+}
+
+@media screen and (max-width: 576px) {
+  .shape5 {
+    left: -40px;
+    top: -120px;
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.shape5::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/backgrounds/shape1.png);
+  background-size: contain;
+  -moz-animation: float 6s ease-in-out infinite;
+  -webkit-animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape3 {
+  content: '';
+  position: absolute;
+  left: -110px;
+  top: -160px;
+  width: 400px;
+  height: 400px;
+}
+
+@media screen and (max-width: 992px) {
+  .shape3 {
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    top: -140px;
+  }
+}
+
+.shape3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/backgrounds/shape1.png);
+  background-size: contain;
+  -moz-animation: float 2.8s ease-in-out infinite;
+  -webkit-animation: float 2.8s ease-in-out infinite;
+  animation: float 2.8s ease-in-out infinite;
+}
+
+.shape7 {
+  position: absolute;
+  left: -60px;
+  top: -140px;
+  width: 300px;
+  height: 300px;
+  z-index: 4;
+}
+
+@media screen and (max-width: 576px) {
+  .shape7 {
+    left: -40px;
+    top: -120px;
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.shape7::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/backgrounds/shape1.png);
+  background-size: contain;
+  -moz-animation: float 6s ease-in-out infinite;
+  -webkit-animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape8 {
+  content: '';
+  position: absolute;
+  right: -80px;
+  width: 250px;
+  height: 250px;
+  z-index: 4;
+}
+
+@media screen and (max-width: 992px) {
+  .shape8 {
+    width: 200px;
+    height: 200px;
+    right: -100px;
+  }
+}
+
+.shape8::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/backgrounds/shape1.png);
+  background-size: contain;
+  -moz-animation: float 2.8s ease-in-out infinite;
+  -webkit-animation: float 2.8s ease-in-out infinite;
+  animation: float 2.8s ease-in-out infinite;
+}
+
 .home {
   position: relative;
   padding: 60px 0 100px 0;
@@ -407,45 +673,6 @@ textarea.form-control {
     padding-top: 30px;
     background-size: cover;
     background-position: 50% 50%;
-  }
-}
-
-.home .shape1 {
-  content: '';
-  position: absolute;
-  right: -170px;
-  top: -140px;
-  width: 460px;
-  height: 460px;
-  background-image: url(../images/backgrounds/shape1.png);
-  background-size: contain;
-  background-position: center;
-}
-
-@media screen and (max-width: 576px) {
-  .home .shape1 {
-    right: -40px;
-    top: -30px;
-    width: 150px;
-    height: 150px;
-  }
-}
-
-.home > .shape2 {
-  content: '';
-  position: absolute;
-  right: 280px;
-  top: -190px;
-  width: 350px;
-  height: 350px;
-  background-image: url(../images/backgrounds/shape1.png);
-  background-size: contain;
-  background-position: center;
-}
-
-@media screen and (max-width: 992px) {
-  .home > .shape2 {
-    display: none;
   }
 }
 
@@ -508,33 +735,13 @@ textarea.form-control {
   }
 }
 
-.home__hero .shape2 {
-  content: '';
-  position: absolute;
-  left: -200px;
-  top: -200px;
-  background-image: url(../images/backgrounds/shape1.png);
-  width: 500px;
-  height: 500px;
-  z-index: 2;
-  background-size: contain;
-}
-
-@media screen and (max-width: 992px) {
-  .home__hero .shape2 {
-    width: 300px;
-    height: 300px;
-    top: -140px;
-    left: -60px;
-  }
-}
-
 .differentials {
   padding: 30px 0;
   margin-top: 30px;
 }
 
 .differentials__item {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -613,8 +820,9 @@ textarea.form-control {
 
 @media screen and (max-width: 992px) {
   .differentials__item__caption {
-    align-self: flex-end;
     width: 96%;
+    margin-right: -12%;
+    align-self: flex-end;
     transform: translate(-20px, -40px);
   }
 }
@@ -687,8 +895,29 @@ textarea.form-control {
   z-index: 2;
 }
 
+@media screen and (max-width: 992px) {
+  .differentials__item__caption__time {
+    top: -36px;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .differentials__item__caption__time {
+    font-size: 40px;
+    top: -30px;
+    left: 2%;
+  }
+}
+
 .differentials__item__caption__time span {
   font-size: 46px;
+}
+
+@media screen and (max-width: 576px) {
+  .differentials__item__caption__time span {
+    font-size: 20px;
+  }
 }
 
 .differentials__item__caption__icon {
@@ -724,6 +953,7 @@ textarea.form-control {
   .differentials__item__caption.left {
     transform: translate(30px, -40px);
     align-self: flex-start;
+    margin-left: -12%;
     padding-right: 77px;
   }
 }
@@ -757,53 +987,29 @@ textarea.form-control {
   left: unset;
 }
 
+@media screen and (max-width: 992px) {
+  .differentials__item__caption.left .differentials__item__caption__time {
+    right: -10%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .differentials__item__caption.left .differentials__item__caption__time {
+    right: -20%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .differentials__item__caption.left .differentials__item__caption__time {
+    right: -30%;
+  }
+}
+
 .steps {
   position: relative;
   padding: 30px 0;
   background-image: url(../images/backgrounds/bgsteps.png);
   background-size: cover;
-}
-
-.steps .shape3 {
-  content: '';
-  position: absolute;
-  left: -110px;
-  top: -160px;
-  width: 400px;
-  height: 400px;
-  background-image: url(../images/backgrounds/shape1.png);
-  background-size: contain;
-  background-position: center;
-}
-
-@media screen and (max-width: 992px) {
-  .steps .shape3 {
-    width: 200px;
-    height: 200px;
-    left: -100px;
-    top: -140px;
-  }
-}
-
-.steps .shape4 {
-  content: '';
-  position: absolute;
-  right: -110px;
-  bottom: -230px;
-  width: 450px;
-  height: 450px;
-  background-image: url(../images/backgrounds/shape1.png);
-  background-size: contain;
-  background-position: center;
-  z-index: 4;
-}
-
-@media screen and (max-width: 768px) {
-  .steps .shape4 {
-    width: 250px;
-    height: 250px;
-    bottom: -130px;
-  }
 }
 
 @media screen and (max-width: 992px) {
@@ -852,6 +1058,7 @@ textarea.form-control {
   height: 80vh;
   overflow: hidden;
   margin: 20px 0;
+  box-shadow: 20px 23px 50px rgba(2, 2, 2, 0.11);
 }
 
 @media screen and (max-width: 992px) {
@@ -867,31 +1074,16 @@ textarea.form-control {
 
 .contact {
   position: relative;
-  padding: 80px 0;
-  padding: 60px 0 100px 0;
+  padding: 60px 0 20px 0;
   background-image: url(../images/backgrounds/bgcontact.png);
   background-size: 100% 100%;
 }
 
-.contact .shape5 {
-  content: '';
-  position: absolute;
-  left: 30px;
-  top: -140px;
-  width: 280px;
-  height: 280px;
-  background-image: url(../images/backgrounds/shape1.png);
-  background-size: contain;
-  background-position: center;
-  z-index: 3;
-}
-
-@media screen and (max-width: 576px) {
-  .contact .shape5 {
-    left: -40px;
-    top: -120px;
-    width: 230px;
-    height: 230px;
+@media screen and (max-width: 992px) {
+  .contact {
+    padding: 30px 0;
+    background-size: cover;
+    background-position: 85%;
   }
 }
 
@@ -935,10 +1127,11 @@ textarea.form-control {
   border-radius: 13px;
   background-color: #e6e6e6;
   width: 80%;
-  height: 50vh;
+  height: 55vh;
   overflow: hidden;
   margin: 20px 0;
   overflow: visible;
+  box-shadow: 20px 23px 50px rgba(2, 2, 2, 0.11);
 }
 
 @media screen and (max-width: 576px) {
@@ -959,11 +1152,8 @@ textarea.form-control {
   right: -50px;
   width: 200px;
   height: 200px;
-  background-image: url("../images/ico/sendbtn.png");
-  background-size: contain;
-  background-position: center center;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -979,6 +1169,21 @@ textarea.form-control {
   transform: scale(1.1);
 }
 
+.contact__box__submit::after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/ico/sendbtn.png");
+  background-size: contain;
+  background-position: center center;
+  -moz-animation: float 8s ease-in-out infinite;
+  -webkit-animation: float 8s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
+}
+
 .contact__box form {
   height: 100%;
   width: 100%;
@@ -990,6 +1195,17 @@ textarea.form-control {
   padding: 30px 40px;
   color: #471e6a;
   background-color: transparent;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 10px 0;
+}
+
+.footer__brand {
+  width: 200px;
 }
 
 body {
