@@ -3,6 +3,7 @@
     padding: 30px 0;
     background-image: url(../images/backgrounds/bgsteps.png);
     background-size: cover;
+    background-repeat: no-repeat;
     
     @media screen and (max-width: $bp-LG) {
         &::after {
