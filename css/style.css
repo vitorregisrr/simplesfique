@@ -345,6 +345,39 @@ textarea.form-control {
   color: black;
 }
 
+.modal-content {
+  border: 0;
+}
+
+.modal-dialog {
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  border: 2px solid #471e6a;
+}
+
+.modal-header {
+  background-color: transparent;
+}
+
+.modal-body {
+  background-color: #f8f8f8;
+  padding: 40px;
+}
+
+.modal-body .inner-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .2px;
+  font-size: 20px;
+  text-align: center;
+  color: #471e6a;
+}
+
+.modal-body .inner-desc {
+  color: #471e6a;
+  font-size: 17px;
+}
+
 .shape-parallax:hover {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -901,12 +934,12 @@ textarea.form-control {
   }
 }
 
-.differentials__item__caption__time span {
+.differentials__item__caption__time span:not(.count) {
   font-size: 46px;
 }
 
 @media screen and (max-width: 576px) {
-  .differentials__item__caption__time span {
+  .differentials__item__caption__time span:not(.count) {
     font-size: 20px;
   }
 }
@@ -1153,11 +1186,15 @@ textarea.form-control {
 }
 
 .contact__box__submit:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.contact__box__submit:focus {
+  outline: none;
 }
 
 .contact__box__submit::after {

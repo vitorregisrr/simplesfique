@@ -71,7 +71,11 @@
             @include transition(0.3s);
 
             &:hover {
-                @include scale(1.1);
+                @include scale(1.05);
+            }
+
+            &:focus{
+                outline: none;
             }
 
             &::after {

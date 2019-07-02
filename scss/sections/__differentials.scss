@@ -149,7 +149,7 @@
                     left: 2%;
                 }
 
-                span {
+                span:not(.count) {
                     font-size: 46px;
 
                     @media screen and (max-width: $bp-SM){

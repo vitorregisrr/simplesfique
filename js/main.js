@@ -21,7 +21,29 @@
             scrollTop: 0
         }, '300');
     });
-    
+
+    $('.count').appear(function () {
+        console.log('a')
+        var $this = $(this);
+        if ($this.attr('data-counted') == 'false') {
+            $this.attr('data-counted', true);
+
+            setTimeout(function () {
+                jQuery({
+                    Counter: 0
+                }).animate({
+                    Counter: $this.text()
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.ceil(this.Counter));
+                    }
+                });
+            }, 200);
+        }
+    });
+
     window.dispatchEvent(new Event('resize'));
 
 })();
