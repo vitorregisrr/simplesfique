@@ -2,7 +2,7 @@
   "_args": [
     [
       "mdi@2.1.19",
-      "C:\\Users\\vitor\\Desktop\\Projetos\\Empresas\\Sorocabacom\\Soja Plus"
+      "C:\\Users\\vitor\\Desktop\\Projetos\\Empresas\\Sorocabacom\\simplesfique"
     ]
   ],
   "_from": "mdi@2.1.19",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/mdi/-/mdi-2.1.19.tgz",
   "_spec": "2.1.19",
-  "_where": "C:\\Users\\vitor\\Desktop\\Projetos\\Empresas\\Sorocabacom\\Soja Plus",
+  "_where": "C:\\Users\\vitor\\Desktop\\Projetos\\Empresas\\Sorocabacom\\simplesfique",
   "author": {
     "name": "Austin Andrews",
     "url": "http://twitter.com/templarian"
