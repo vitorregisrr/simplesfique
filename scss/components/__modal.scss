@@ -4,7 +4,7 @@
 
 .modal-dialog {
     border-radius: 5px;
-    background-color: rgb(248, 248, 248);
+    background-color: $color-secondary;
     border: 2px solid $color-secondary;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .modal-body {
-    background-color: rgb(248, 248, 248);
+    background-color: $color-secondary;
     padding: 40px;
 
     .inner-title {
@@ -22,11 +22,15 @@
         letter-spacing: .2px;
         font-size: 20px;
         text-align: center;
-        color: $color-secondary;
+        color: #fff;
     }
 
+    .close{
+        color: #fff;
+    }
+    
     .inner-desc {
-        color: $color-secondary;
+        color: #fff;
         font-size: 17px;
     }
 }

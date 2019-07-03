@@ -14,6 +14,10 @@
 	transform: scale($val);
 }
 
+.float{
+	animation: float 6s infinite;
+}
+
 @keyframes float {
 	0% {
 		transform: translatey(0px);
